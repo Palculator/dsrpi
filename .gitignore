@@ -30,3 +30,20 @@
 *.exe
 *.out
 *.app
+
+# library directories
+dsrpi/lib
+
+# build directories
+dsrpi/build
+dsrpi/temp
+
+# vs junk
+
+.vs
+dsrpi.vcxproj.user
+dsrpi.vcxproj.filters
+
+# sean's util library
+
+dsrpi/include/sp

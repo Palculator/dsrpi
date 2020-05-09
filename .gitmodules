@@ -1,0 +1,3 @@
+[submodule "dsrpi/d3d11-wrapper"]
+	path = dsrpi/d3d11-wrapper
+	url = git@github.com:Palculator/d3d11-wrapper.git
