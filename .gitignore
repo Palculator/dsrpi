@@ -37,6 +37,7 @@ dsrpi/lib
 # build directories
 dsrpi/build
 dsrpi/temp
+dsrpi/d3d11temp
 
 # vs junk
 

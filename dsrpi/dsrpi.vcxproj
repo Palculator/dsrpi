@@ -54,6 +54,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
@@ -76,10 +77,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>dsrpi_dbg_x64</TargetName>
-    <OutDir>lib</OutDir>
+    <OutDir>lib/</OutDir>
     <IncludePath>include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
-    <IntDir>temp</IntDir>
+    <IntDir>temp/</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -152,12 +153,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\dsrpi.cpp" />
+    <ClCompile Include="src\AntiAntiCheat.cpp" />
+    <ClCompile Include="src\DSRData.cpp" />
+    <ClCompile Include="src\DSRPIMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\dsrpi.h" />
+    <ClInclude Include="include\AntiAntiCheat.h" />
+    <ClInclude Include="include\DSRData.h" />
+    <ClInclude Include="include\DSRPI.h" />
+    <ClInclude Include="include\DSRPIMain.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="src\AntiAntiCheatASM.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
   </ImportGroup>
 </Project>
