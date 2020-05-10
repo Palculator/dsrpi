@@ -48,3 +48,5 @@ dsrpi.vcxproj.filters
 # sean's util library
 
 dsrpi/include/sp
+
+*.log
